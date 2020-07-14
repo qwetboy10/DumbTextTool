@@ -7,5 +7,5 @@ def solve_verbose(text):
     min_len = min(map(lambda w: len(w), filter(lambda line: len(line) > 0, words)))
     ret = []
     for i in range(1,min_len):
-        ret.append(''.join(map(lambda w: w[i], words)))
+        ret.append(''.join(map(lambda w: w[i], filter(lambda line: len(line) > 0, words))))
     return ret
